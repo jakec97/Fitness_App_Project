@@ -1,0 +1,5 @@
+Version 0.1 - Simple python program that takes user body information inputs, analyses the results against common fitness assessments
+              (Body Mass Index + Body Fat Assessments), and then provides the results as output to the user.
+              - Files: main.py, classes.py
+
+Version 0.2 -
