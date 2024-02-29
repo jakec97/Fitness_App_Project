@@ -1,11 +1,9 @@
 from datetime import datetime, date
 
-class user_details:
-    def __init__(self,first_name,last_name,age,email_address,gender,height,weight,body_fat):
+class user_details():
+    def __init__(self,first_name,age,gender,height,weight,body_fat):
         self.first_name = first_name
-        self.last_name = last_name
         self.age = age
-        self.email_address = email_address
         self.gender = gender
         self.height = height
         self.weight = weight
@@ -17,7 +15,8 @@ class user_details:
         return bmi
 
     # Classifying BMI Score against NHS Ranges
-    def bmi_assessor(bmi):
+    def bmi_assessor(self):
+        bmi = float(self.weight) / (float(self.height) ** 2)
         if bmi <= 18.4:
             return 'Underweight'
         elif 18.4 <= bmi <= 24.9:
