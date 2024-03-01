@@ -5,18 +5,18 @@ from classes import user_details
 
 # Function to get user information
 def get_user_input():
-    # first_name = input("First Name: ")
-    # age = input("Age: ")
-    # gender = input("Gender (M/F): ")
-    # height = input("Height (Meters): ")
-    # weight = input("Weight (KG): ")
-    # body_fat = input("Body Fat %: ")
-    first_name = 'Jake'
-    age = 27
-    gender = 'M'
-    height = 1.78
-    weight = 80.7
-    body_fat = 0.25
+    first_name = input("First Name: ")
+    age = input("Age: ")
+    gender = input("Gender (M/F): ")
+    height = input("Height (Meters): ")
+    weight = input("Weight (KG): ")
+    body_fat = input("Body Fat %: ")
+    # first_name = 'Jake'
+    # age = 27
+    # gender = 'M'
+    # height = 1.78
+    # weight = 80.7
+    # body_fat = 0.25
 
     return user_details(first_name,age,gender,height,weight,body_fat)
 
@@ -32,7 +32,7 @@ bmi_classification = user.bmi_assessor()
 # BODY FAT ASSESSMENT
 body_fat_percentage = float(user.body_fat)*100
 body_fat_classification = user.body_fat_score()
-weight_loss_required = round(user.weight-((user.weight/bmi)*24.9),2)
+weight_loss_required = round(float(user.weight)-((float(user.weight)/bmi)*24.9),2)
 
 
 # FINAL RESULTS
